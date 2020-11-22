@@ -1,0 +1,72 @@
+ /* header styling */
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    /* the logo won't move even if we scroll up or down */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo {
+    width: 100px;
+    /* keep the aspect ratio in containment to the screen */
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px  ;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+}
+
+/* fix the alignment */
+.header__search {
+    display: flex;
+    /* spreads the search bar as big as it can get */
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+/* styling for the search input */
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* consider line 1 as the h1 tag */
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+/* consider line 2 as the h2 tag */
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+}
