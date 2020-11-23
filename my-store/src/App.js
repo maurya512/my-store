@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css';
 // import the header tag from Header.js
 import Header from './Header';
-
+// import the home tag from Home.js
+import Home from './Home';
+ 
 function App() {
   return (
     // bem convention
@@ -10,7 +12,7 @@ function App() {
       {/* <h1> Maurya's online store</h1> */}
       {/* Header  */}
       <Header/>
-      {/* Home */}
+      < Home />
     </div>
   );
 }
