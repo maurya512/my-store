@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 // import the header tag from Header.js
 import Header from './Header';
@@ -7,8 +7,30 @@ import Home from './Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Checkout from './Checkout';
 import Login from './Login';
-
+import { auth } from './firebase';
+import { useStateValue } from './StateProvider';
 function App() {
+  const [{}, dispatch] = useStateValue();
+  useEffect(() => {
+    // will only run once the app component loads
+    auth.onAuthStateChanged(authUser => {
+      console.log('The user is ' + authUser);
+      if(authUser) {
+        // the user just logged in
+        dispatch({
+          // set the user to whoever was logged in using firebase 
+          type: 'SET_USER',
+          user: authUser
+        })
+      } else {
+      dispatch({
+        type: 'SET_USER',
+        user: null
+      })
+    }
+    })
+  }, [])
+
   return (
     // bem convention
     <Router>
