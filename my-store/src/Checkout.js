@@ -6,7 +6,7 @@ import CheckoutProduct from './CheckoutProduct';
 function Checkout() {
 
     // pulls the cart from the dataLayer
-    const [{ cart }, dispatch] = useStateValue();
+    const [{ cart, user }, dispatch] = useStateValue();
     return (
         <div className="checkout">
             {/* have two sections for the checkout page */}
@@ -14,6 +14,7 @@ function Checkout() {
             <div className="checkout__left">
                 <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" alt="ad banner" />
                 <div>
+                    {/* <h3>Hello, {user.email}</h3> */}
                     <h2 className="checkout__title">
                         Your Shopping Cart
                     </h2>
