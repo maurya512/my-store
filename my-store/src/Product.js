@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider';
 // props
 function Product({id, title, image, price, rating}) {
     const [{ cart }, dispatch] = useStateValue();
-    console.log('this is the cart: ' + cart);
+    // console.log('this is the cart: ' + cart); 
     const addToCart = () => {
         // dispatch the item to dataLayer
         // how we manipulate the data
