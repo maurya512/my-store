@@ -6,6 +6,7 @@ import Header from './Header';
 import Home from './Home';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
   return (
@@ -13,17 +14,23 @@ function App() {
     <Router>
     <div className="app">
       {/* header always gets rendered */}
-      <Header />
       <Switch>
+        {/* Login route */}
+        <Route path='/login'>
+          <Login />
+          {/* Login component */}
+        </Route>
         {/* checkout path  */}
         <Route path='/checkout'>
           {/* checkout component */}
+          <Header />
           <Checkout />
         </Route>
         {/* default route always stays at the bottom as that's the last case scenario */}
         {/* a default route when a designated path isn't hit */}
         {/* Home page route */}
         <Route path='/'>
+          <Header/>
         <Home />
         </Route>
       </Switch>
