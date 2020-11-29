@@ -28,6 +28,6 @@
 }
 
 /* will take up 80% of the flexbox */
-.payment__addressm .payment__items {
+.payment__addressm .payment__items, .payment__details {
     flex: 0.8;
 }
