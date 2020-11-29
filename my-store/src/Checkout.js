@@ -3,6 +3,8 @@ import './Checkout.css';
 import Subtotal from './Subtotal';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
+// import { auth } from './firebase'; 
+
 function Checkout() {
 
     // pulls the cart from the dataLayer
@@ -14,10 +16,10 @@ function Checkout() {
             <div className="checkout__left">
                 <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" alt="ad banner" />
                 <div>
-                    {/* <h3>Hello, {user.email}</h3> */}
                     <h2 className="checkout__title">
                         Your Shopping Cart
                     </h2>
+                    {/* <h3>Hello, {user.email}</h3> */}
                     {cart.map(item => (
                         <CheckoutProduct
                             id={item.id}
