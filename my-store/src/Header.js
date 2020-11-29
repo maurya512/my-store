@@ -32,8 +32,9 @@ function Header() {
             <div className="header__nav">
                 <Link to={!user && '/login'}>
                     {/* options are the ones that have hello sign in, cart and such */}
-                    <div onClick={handleAuthentication}className="header__option">
-                        <span className="header__optionLineOne">Hello Guest</span>
+                    <div onClick={handleAuthentication} className="header__option">
+                        {/* displays the user info if available and if no info available displays the user as guest */}
+                        <span className="header__optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
                         <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
