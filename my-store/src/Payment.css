@@ -1,0 +1,33 @@
+.payment__container {
+    background-color: white;
+}
+
+.payment__container > h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+}
+
+/* targets the anchor tag inside of h1 and gets rid of the __ */
+.payment__container > h1 a {
+    text-decoration: none;
+}
+
+.payment__section {
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+/* will take up 20% of the flexbox */
+.payment__title {
+    flex: 0.2;
+}
+
+/* will take up 80% of the flexbox */
+.payment__addressm .payment__items {
+    flex: 0.8;
+}
