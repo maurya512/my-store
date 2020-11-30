@@ -1,0 +1,33 @@
+[debug] [2020-11-29T23:47:55.523Z] ----------------------------------------------------------------------
+[debug] [2020-11-29T23:47:55.526Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hares\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2020-11-29T23:47:55.527Z] CLI Version:   8.16.2
+[debug] [2020-11-29T23:47:55.527Z] Platform:      win32
+[debug] [2020-11-29T23:47:55.527Z] Node Version:  v15.2.1
+[debug] [2020-11-29T23:47:55.529Z] Time:          Sun Nov 29 2020 18:47:55 GMT-0500 (Eastern Standard Time)
+[debug] [2020-11-29T23:47:55.529Z] ----------------------------------------------------------------------
+[debug] [2020-11-29T23:47:55.529Z] 
+[debug] [2020-11-29T23:47:55.539Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-29T23:47:55.540Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2020-11-29T23:47:55.599Z] [hub] writing locator at C:\Users\hares\AppData\Local\Temp\hub-my-store-ce964.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub\u001b[22m"}}
+[warn] !  Your requested "node" version "12" doesn't match your global version "15" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"12\" doesn't match your global version \"15\""}}
+[debug] [2020-11-29T23:47:55.648Z] defaultcredentials: writing to file C:\Users\hares\AppData\Roaming\firebase\patelmaurya0512_gmail_com_application_default_credentials.json
+[debug] [2020-11-29T23:47:55.652Z] Setting GAC to C:\Users\hares\AppData\Roaming\firebase\patelmaurya0512_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\hares\\AppData\\Roaming\\firebase\\patelmaurya0512_gmail_com_application_default_credentials.json"}}
+[debug] [2020-11-29T23:47:55.668Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-store-ce964/webApps/-/config  
+ 
+[debug] [2020-11-29T23:47:56.095Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 29 Nov 2020 23:47:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2020-11-29T23:47:56.378Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-11-29T23:47:56.378Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2020-11-29T23:47:56.379Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\hares\\.cache\\firebase\\emulators\\ui-v1.2.2\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\hares\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.2.2\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2020-11-29T23:47:56.538Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\hares\Desktop\my-store\my-store\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\hares\\Desktop\\my-store\\my-store\\functions\" for Cloud Functions..."}}
+[debug] [2020-11-29T23:47:56.709Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-11-29T23:47:56.709Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2020-11-29T23:47:56.709Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-11-29T23:47:56.710Z] [worker-~diagnostic~-15199342-23c0-4334-908e-143222d387d0]: Assigning socketPath: \\?\pipe\C:\Users\hares\Desktop\my-store\my-store\functions\13940 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-15199342-23c0-4334-908e-143222d387d0]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\hares\\Desktop\\my-store\\my-store\\functions\\13940"}}
+[debug] [2020-11-29T23:47:56.711Z] [worker-~diagnostic~-15199342-23c0-4334-908e-143222d387d0]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-15199342-23c0-4334-908e-143222d387d0]: BUSY"}}
