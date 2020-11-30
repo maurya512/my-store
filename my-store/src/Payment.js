@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import axios from './axios';
 import React, { useState, useEffect } from 'react'
 import CheckoutProduct from './CheckoutProduct';
@@ -9,6 +9,7 @@ import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from './reducer';
 
 function Payment() {
+    const history = useHistory();
     const [{ cart, user }, disptach] = useStateValue();
     const [succeeded, setSucceded] = useState(false);
     const [processing, setProcessing] = useState("");
@@ -22,17 +23,18 @@ function Payment() {
         // generate the special stripe secret which allows us to charge a customer
 
 
-        const getClientSecret = async() => {
+        const getClientSecret = async () => {
             const response = await axios({
                 method: 'post',
                 // stripe expects the total in a currencies subunits
-                url: `/payments/create?Total=${getCartTotal(cart) * 100}`
+                url: `/payments/create?total=${getCartTotal(cart) * 100}`
             });
             setClientSecret(response.data.clientSecret)
         }
 
         getClientSecret();
     }, [cart])
+    console.log('The secret is:', clientSecret)
 
     const handleSubmit = async event => {
         // stripe stuff
@@ -45,14 +47,14 @@ function Payment() {
             payment_method: {
                 card: elements.getElement(CardElement)
             }
-        }).then(({paymetIntent}) => {
+        }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
-            setSucceded(true);
-            setError(null);
-            setProcessing(false);
+            setSucceded(true)
+            setError(null)
+            setProcessing(false)
 
             history.replace('/orders')
-        }) 
+        })
     }
 
     const handleChange = event => {
@@ -112,27 +114,27 @@ function Payment() {
                             <div className='payment__priceContainer'>
                                 <CurrencyFormat
                                     renderText={(value) => (
-                                    <>
-                                    <h3>Order Total: {value}</h3>
-                                    </>
-                                )}
-                                decimalScale={2}
-                                value={getCartTotal(cart)}
-                                displayType={'text'}
-                                thousandSeperator={true}
-                                prefix={'$'}
+                                        <>
+                                            <h3>Order Total: {value}</h3>
+                                        </>
+                                    )}
+                                    decimalScale={2}
+                                    value={getCartTotal(cart)}
+                                    displayType={'text'}
+                                    thousandSeperator={true}
+                                    prefix={'$'}
                                 />
                                 <button disabled={processing || disabled || succeeded}>
-                                    <span>{processing ? <p>Processing</p> :"Buy Now"}</span>
+                                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                 </button>
                             </div>
                             {/* Errors */}
-                                    {error && <div>{error}</div>}
+                            {error && <div>{error}</div>}
                         </form>
-                    </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 
